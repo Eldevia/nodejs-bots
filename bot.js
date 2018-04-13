@@ -1,23 +1,15 @@
-const Discord = require("discord.js")
+const Discord = require('discord.js');
+const client = new Discord.Client();
 const PREFIX = "~";
 const TOKEN = "MzAzOTAyNDM0OTc4NDMwOTc4.DC8Y6Q.Y4QtFMaXwW2qtWEPp_EFudOF1tI";
 const YTDL = require('ytdl-core');
 const fs = require('fs');
 const X = '.';
-const client = new Discord.Client();
+
 
 client.on('ready', () => {
     console.log('I am ready!');
 });
-
-client.on('message', message => {
-    if (message.content === 'ping') {
-    	message.reply('pong');
-  	}
-});
-
-
-
 function play(connection, message) {
     var server = servers[message.guild.id];
     server.dispatcher = connection.playStream(YTDL(server.queue[0], {filter: 'audioonly'}));
@@ -562,4 +554,8 @@ else {
         
 });
 
+
+
+
+// THIS  MUST  BE  THIS  WAY
 client.login(process.env.B0T_T0KEN);
