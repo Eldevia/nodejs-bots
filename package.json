@@ -1,0 +1,24 @@
+{
+  "name": "elbot",
+  "version": "9.9.9",
+  "description": "EL ESPORTS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "EL ESPORTS",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.1.0",
+    "ffmpeg-binaries": "^3.2.2-3",
+    "forever": "^0.15.3",
+    "fs": "0.0.1-security",
+    "get-youtube-id": "^1.0.0",
+    "opusscript": "0.0.3",
+    "request": "^2.81.0",
+    "youtube-api": "^2.0.8",
+    "youtube-info": "^1.1.1",
+    "youtube-node": "^1.3.0",
+    "ytdl-core": "^0.14.4"
+  }
+}
