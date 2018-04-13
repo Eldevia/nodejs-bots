@@ -4,7 +4,20 @@ const TOKEN = "MzAzOTAyNDM0OTc4NDMwOTc4.DC8Y6Q.Y4QtFMaXwW2qtWEPp_EFudOF1tI";
 const YTDL = require('ytdl-core');
 const fs = require('fs');
 const X = '.';
-const Client = new Discord.client();
+const client = new Discord.Client();
+
+client.on('ready', () => {
+    console.log('I am ready!');
+});
+
+client.on('message', message => {
+    if (message.content === 'ping') {
+    	message.reply('pong');
+  	}
+});
+
+// THIS  MUST  BE  THIS  WAY
+client.login(process.env.BOT_TOKEN);
 
 function play(connection, message) {
     var server = servers[message.guild.id];
@@ -140,7 +153,7 @@ bot.on("message", function(message) {
 
     var args = message.content.substring(PREFIX.length).split(" ");
     
-client.login(process.env.B0T_T0KEN)
+
 
     switch (args[0]) {
         case "cmds":
